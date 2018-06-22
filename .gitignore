@@ -1,5 +1,11 @@
-
 # Created by https://www.gitignore.io/api/node,macos,sublimetext
+
+### CRA ###
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+build
 
 ### macOS ###
 *.DS_Store
