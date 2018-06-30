@@ -1,12 +1,22 @@
 import React from 'react'
 
 class Canvas extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hasAlertedAlternative: false
+    }
+  }
+
   componentDidMount () {
     const { canvas } = this.refs
 
-    if (!canvas) return
+    if (!canvas.getContext && !this.state.hasAlertedAlternative) {
+      this.setState({ hasAlertedAlternative: true })
 
-    if (!canvas.getContext) return alert(this.props.alternative)
+      return alert(this.props.alternative)
+    }
 
     const context = canvas.getContext('2d')
 
