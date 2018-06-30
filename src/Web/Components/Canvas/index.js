@@ -13,10 +13,14 @@ class Canvas extends React.Component {
     if (!context) return
 
     context.fillStyle = 'rgb(200,0,0)'
-    context.fillRect (10, 10, 55, 50)
+    context.beginPath()
+    context.arc(35, 35, 25 , 0, 2 * Math.PI)
+    context.fill()
 
     context.fillStyle = 'rgba(0, 0, 200, 0.5)'
-    context.fillRect (30, 30, 55, 50)
+    context.beginPath()
+    context.arc(55, 55, 25 , 0, 2 * Math.PI)
+    context.fill()
   }
 
   render () {
