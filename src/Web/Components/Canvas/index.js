@@ -10,6 +10,8 @@ class Canvas extends React.Component {
 
     const context = canvas.getContext('2d')
 
+    if (!context) return
+
     context.fillStyle = 'rgb(200,0,0)'
     context.fillRect (10, 10, 55, 50)
 
