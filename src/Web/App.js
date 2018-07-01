@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './App.css';
+import './App.css'
 
 import Canvas from './Components/Canvas'
 import Geometric from './Components/Geometric'
