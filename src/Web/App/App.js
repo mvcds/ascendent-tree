@@ -2,9 +2,9 @@ import React from 'react'
 
 import './App.css'
 
-import Canvas from './Components/Canvas'
-import Geometric from './Components/Geometric'
-import Subject from './Components/Subject'
+import Canvas from '../Components/Canvas'
+import Geometric from '../Components/Geometric'
+import Subject from '../Components/Subject'
 
 function App () {
   const { innerWidth: width, innerHeight: height } = window
