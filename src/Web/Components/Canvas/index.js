@@ -27,14 +27,21 @@ class Canvas extends React.Component {
 
   render () {
     const { alternative, width, height, children } = this.props
+    const { context } = this.state
 
     return (
       <canvas width={width} height={height} ref="canvas">
         {alternative}
-        {this.state.context && React.Children.map(children, this.draw)}
+        {context &&  <Context context={context} children={children} draw={this.draw} />}
       </canvas>
     )
   }
+}
+
+function Context ({ children, context, draw }) {
+  context.clearRect(0, 0, context.width, context.height)
+
+  return React.Children.map(children, draw)
 }
 
 function draw (child) {
