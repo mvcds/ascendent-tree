@@ -1,0 +1,15 @@
+.subject {
+  box-sizing: border-box;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  background: linear-gradient(red, blue);
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}
