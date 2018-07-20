@@ -1,0 +1,7 @@
+.father {
+  box-sizing: border-box;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  background: blue;
+}
