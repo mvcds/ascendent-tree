@@ -1,8 +1,19 @@
-.subject {
+.person__subject {
   box-sizing: border-box;
   border-radius: 100%;
   height: 48px;
   width: 48px;
+}
+
+.person__subject--father {
+  background: blue;
+}
+
+.person__subject--mother {
+  background: red;
+}
+
+.person__subject--subject {
   background: linear-gradient(red, blue);
   animation: spin 4s linear infinite;
 }

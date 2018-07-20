@@ -3,16 +3,14 @@ import React from 'react'
 import './App.css'
 
 import Subject from '../Components/Subject'
-import Father from '../Components/Father'
-import Mother from '../Components/Mother'
+import Person from '../Components/Person'
 
 function App () {
   return (
-    <React.Fragment>
-      <Subject />
-      <Father />
-      <Mother />
-    </React.Fragment>
+    <Person.Subject>
+      <Person.Father />
+      <Person.Mother />
+    </Person.Subject>
   )
 }
 
