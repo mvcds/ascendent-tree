@@ -1,3 +1,11 @@
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8px;
+}
+
 .person__subject {
   box-sizing: border-box;
   border-radius: 100%;
@@ -16,6 +24,10 @@
 .person__subject--subject {
   background: linear-gradient(red, blue);
   animation: spin 4s linear infinite;
+}
+
+.person__descendents {
+  display: flex;
 }
 
 @keyframes spin {
