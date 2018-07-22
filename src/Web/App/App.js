@@ -2,7 +2,6 @@ import React from 'react'
 
 import './App.css'
 
-import Subject from '../Components/Subject'
 import Person from '../Components/Person'
 
 function App () {
