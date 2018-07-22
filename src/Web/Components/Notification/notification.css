@@ -1,0 +1,11 @@
+.notification {
+  padding: 8px;
+  border: 2px solid;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.notification--message {
+  background-color:  white;
+  border-color:  black;
+}
