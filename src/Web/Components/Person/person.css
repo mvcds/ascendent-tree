@@ -6,22 +6,22 @@
   margin: 8px;
 }
 
-.person__subject {
+.person__self {
   box-sizing: border-box;
   border-radius: 100%;
   height: 48px;
   width: 48px;
 }
 
-.person__subject--father {
+.person__self--father {
   background: blue;
 }
 
-.person__subject--mother {
+.person__self--mother {
   background: red;
 }
 
-.person__subject--subject {
+.person__self--subject {
   background: linear-gradient(red, blue);
   animation: spin 4s linear infinite;
 }

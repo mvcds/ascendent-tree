@@ -8,7 +8,7 @@ const block = bem.bind(null, 'person')
 function Person ({ children, kind }) {
   return (
     <div className={block()}>
-      <div className={block('subject', [ kind ])}></div>
+      <div className={block('self', [ kind ])}></div>
       <div className={block('descendents')}>
         {children}
       </div>
