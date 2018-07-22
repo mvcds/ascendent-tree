@@ -5,10 +5,10 @@ import './person.css'
 
 const block = bem.bind(null, 'person')
 
-function Person ({ children, kind }) {
+function Person ({ children, relationship }) {
   return (
     <div className={block()}>
-      <div className={block('self', [ kind ])}></div>
+      <div className={block('self', [ relationship ])}></div>
       <div className={block('descendents')}>
         {children}
       </div>
@@ -17,7 +17,7 @@ function Person ({ children, kind }) {
 }
 
 export default {
-  Father: (props) => Person({ ...props, kind: 'father' }),
-  Mother: (props) => Person({ ...props, kind: 'mother' }),
-  Subject: (props) => Person({ ...props, kind: 'subject' })
+  Father: (props) => Person({ ...props, relationship: 'father' }),
+  Mother: (props) => Person({ ...props, relationship: 'mother' }),
+  Subject: (props) => Person({ ...props, relationship: 'subject' })
 }
