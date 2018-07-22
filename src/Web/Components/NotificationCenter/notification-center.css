@@ -1,0 +1,26 @@
+.notification-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.notification-center__item {
+  padding: 8px;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.notification-center__item + .notification-center__item {
+  margin-top: 16px;
+}
+
+.notification-center__item--message {
+  background-color:  white;
+  border-color:  black;
+}
