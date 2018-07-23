@@ -1,21 +1,15 @@
 import React from 'react'
 import bem from 'bem-classname'
+import { connect } from 'react-redux'
 
 import './notification-center.css'
 
 const block = bem.bind(null, 'notification-center')
 
-function NotificationCenter () {
+function NotificationCenter ({ notifications }) {
   return (
     <div className={block()}>
-      <Notification type="message">
-        <p>
-          Welcome to the <strong>ascendent tree</strong> project.
-        </p>
-        <p>
-          A place where you can find how many generations were necessary to make you, you
-        </p>
-      </Notification>
+      {notifications.map(Notification)}
     </div>
   )
 }
@@ -28,4 +22,12 @@ function Notification ({ children, type }) {
   )
 }
 
-export default NotificationCenter
+function mapStateToProps (state) {
+  return {
+    notifications: Object.values(state)
+  }
+}
+
+export default connect(
+  mapStateToProps,
+)(NotificationCenter)
