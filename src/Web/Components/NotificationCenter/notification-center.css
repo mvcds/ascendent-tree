@@ -10,17 +10,29 @@
   z-index: 100;
 }
 
-.notification-center__item {
+.notification {
   padding: 8px;
   border: 2px solid;
   border-radius: 4px;
 }
 
-.notification-center__item + .notification-center__item {
+.notification + .notification {
   margin-top: 16px;
 }
 
-.notification-center__item--message {
+.notification--message {
   background-color:  white;
   border-color:  black;
+}
+
+.notification header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.notification__close-button {
+  cursor: pointer;
 }

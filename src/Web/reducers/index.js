@@ -3,6 +3,7 @@ import React from 'react'
 const NOTIFICATIONS = {
   '1': {
     type: 'message',
+    title: 'test',
     children: (
       <p>Hello from notifications</p>
     )
