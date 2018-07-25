@@ -6,10 +6,10 @@ import './notification-center.css'
 
 const block = bem.bind(null, 'notification')
 
-function NotificationCenter ({ notifications }) {
+function NotificationCenter ({ notifications, onCloseNotification }) {
   return (
     <div className="notification-center">
-      {notifications.map(Notification)}
+      {notifications.map(Notification, { onCloseNotification })}
     </div>
   )
 }
@@ -21,7 +21,7 @@ function Notification ([ id, { children, title, type } ]) {
         <span className={block('title')}>
           {title}
         </span>
-        <span className={block('close-button')} role="button">
+        <span className={block('close-button')} role="button" onClick={this.onCloseNotification(id)}>
           &times;
         </span>
       </header>
@@ -38,6 +38,20 @@ function mapStateToProps (state) {
   }
 }
 
+function mapDispatchToProps (dispatch) {
+  return {
+    onCloseNotification: closeNotification.bind(null, dispatch)
+  }
+}
+
+function closeNotification (dispatch, id) {
+  return () => dispatch({
+    type: 'CLOSE_NOTIFICATION',
+    payload: { id }
+  })
+}
+
 export default connect(
   mapStateToProps,
+  mapDispatchToProps
 )(NotificationCenter)
