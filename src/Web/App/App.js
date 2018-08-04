@@ -16,10 +16,10 @@ const store = createStore(rootReducer)
 function App () {
   return (
     <Provider store={store}>
-        <div className={block()}>
-          <NotificationCenter />
-          <Person.Subject />
-        </div>
+      <div className={block()}>
+        <NotificationCenter />
+        <Person.Subject />
+      </div>
     </Provider>
   )
 }
