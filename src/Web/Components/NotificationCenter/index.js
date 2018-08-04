@@ -7,11 +7,14 @@ import './notification-center.css'
 const block = bem.bind(null, 'notification')
 
 function NotificationCenter ({ notifications, onCloseNotification }) {
-  return (
-    <div className="notification-center">
+  if (!notifications.length) return null
+
+  return [
+    <div className="notification-center__background" key="background"/>,
+    <div className="notification-center" key="notification-center">
       {notifications.map(Notification, { onCloseNotification })}
     </div>
-  )
+  ]
 }
 
 function Notification ([ id, { children, title, type } ]) {

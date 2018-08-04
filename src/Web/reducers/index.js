@@ -14,7 +14,7 @@ const NOTIFICATIONS = {
           This is the place where you can find how many generations were necessary to make you, you.
         </p>
         <p>
-          The colorful ball you've just seen represents you. Click it to proceed.
+          The colorful ball you've just seen represents you. Click it to proceed, after closing this box.
         </p>
       </React.Fragment>
     )
