@@ -35,9 +35,9 @@ function Notification ([ id, { children, title, type } ]) {
   )
 }
 
-function mapStateToProps (state) {
+function mapStateToProps ({ notifications }) {
   return {
-    notifications: Object.entries(state)
+    notifications: Object.entries(notifications)
   }
 }
 
