@@ -10,7 +10,7 @@ import rootReducer from '../reducers'
 
 import './App.css'
 
-const block = bem.bind(null, '!app')
+const block = bem.bind(null, 'app')
 const store = createStore(rootReducer)
 
 function App () {
