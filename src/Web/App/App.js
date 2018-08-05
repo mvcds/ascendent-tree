@@ -2,7 +2,7 @@ import React from 'react'
 import bem from 'bem-classname'
 import { Provider } from 'react-redux'
 
-import Person from '../Components/Person'
+import AscendentTree from '../Components/AscendentTree'
 import NotificationCenter from '../Components/NotificationCenter'
 import AddGenerationButton from '../Components/AddGenerationButton'
 
@@ -17,8 +17,8 @@ function App () {
     <Provider store={store}>
       <div className={block()}>
         <NotificationCenter />
-        <Person.Subject />
         <AddGenerationButton />
+        <AscendentTree />
       </div>
     </Provider>
   )
