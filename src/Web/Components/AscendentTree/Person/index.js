@@ -9,7 +9,7 @@ function Person ({ children, relationship }) {
   return (
     <div className={block()}>
       <div className={block('self', [ relationship ])}></div>
-      <div className={block('descendents')}>
+      <div className={block('ascendents')}>
         {children}
       </div>
     </div>
