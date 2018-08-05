@@ -1,0 +1,4 @@
+{
+  "name": "AddGenerationButton",
+  "main": "addGenerationButton.redux.js"
+}

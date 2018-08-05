@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 
 import Person from '../Components/Person'
 import NotificationCenter from '../Components/NotificationCenter'
+import AddGenerationButton from '../Components/AddGenerationButton'
 
 import store from '../Infra/ReduxStore'
 
@@ -17,6 +18,7 @@ function App () {
       <div className={block()}>
         <NotificationCenter />
         <Person.Subject />
+        <AddGenerationButton />
       </div>
     </Provider>
   )
